@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 export default function Header() {
@@ -6,7 +7,7 @@ export default function Header() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container style={{ maxWidth: "none" }}>
         <Navbar.Brand href="/">
-          <img
+          <Image
             alt="Logo"
             src="/apple-touch-icon.png"
             width="30"
