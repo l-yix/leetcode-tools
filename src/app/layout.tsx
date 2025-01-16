@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import 'bootstrap/dist/css/bootstrap.css';
+import nextConfig from "../../next.config";
 
 
 const geistSans = Geist({
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
   title: "Leetcode Tools",
   description: "Created by Yi Xuan Lim",
   icons: {
-    icon: ['/favicon.ico?v=4'],
-    apple: ['/apple-touch-icon.png?v=4'],
-    shortcut: ['/apple-touch-icon.png'],
+    icon: [`${nextConfig.basePath}/favicon.ico?v=4`],
+    apple: [`${nextConfig.basePath}/apple-touch-icon.png?v=4`],
+    shortcut: [`${nextConfig.basePath}/apple-touch-icon.png`],
   },
-  manifest: '/site.webmanifest',
+  manifest: `${nextConfig.basePath}/site.webmanifest`,
 };
 
 export default function RootLayout({

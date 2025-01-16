@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import nextConfig from '../../next.config';
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 export default function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container style={{ maxWidth: "none" }}>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} href="/">
           <Image
             alt="Logo"
-            src="/apple-touch-icon.png"
+            src={`${nextConfig.basePath}/apple-touch-icon.png`}
             width="30"
             height="30"
             className="d-inline-block align-top"
